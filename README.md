@@ -21,3 +21,18 @@ there are 10 classes (> 2 classes), 0-9, so we use categorical_crossentropy loss
 
 Data Augmentation:
 to produce many additional images for each original image by shifting, rotating, changing scale, flipping, shearing and cropping etc. while keeping the label the same. By applying some transformations to our training data, we can easily double or triple the number of training samples and create a very robust model. In this case, randomly rotate some training images by 8 degrees (0-180 degrees); randomly zoom by 8% some training images; randomly shift images horizontally by 8%; randomly shift images vertically by 8% ...
+
+
+Description about PNN CW5 Type2:
+
+The first four cells: Data Preprocessing
+
+Backbone:
+strides: step size along the width and height direction;
+padding: "same": output's size is the same as input's. "valid": return just non-padding parts;
+
+Training:
+import LearningRateScheduler from keras library callbacks module;
+details: https://keras.io/zh/callbacks/#learningratescheduler
+import ModelCheckpoint class to record each model of each epoch from keras.callbacks;
+details: https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/ModelCheckpoint?hl=zh-cn
